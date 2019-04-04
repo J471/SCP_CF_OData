@@ -1,0 +1,1 @@
+web: PORT=8080 python main.py
