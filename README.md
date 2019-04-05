@@ -1,5 +1,5 @@
 # Consume SAP Gateway OData Service by using Python Flask REST API application in SAP Cloud Platform - Cloud Foundry
-One Paragraph of project description goes here
+A sample of integration between SAP Gateway OData service, Python Flask REST API and SAP Cloud Platform - Cloud Foundry
 
 ## Table of contents
 * [Getting Started](#getting-started)
