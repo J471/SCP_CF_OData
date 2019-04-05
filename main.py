@@ -7,7 +7,7 @@ import base64
 
 app = Flask(__name__)
 
-def scp_connect(dest_name,dest_uri):
+def scp_connect(dest_name,dest_uri,dest_client):
     ######################################################################
     ############### Step 1: Read the environment variables ###############
     ######################################################################
@@ -33,26 +33,35 @@ def scp_connect(dest_name,dest_uri):
     token = r.json()["access_token"]
     headers= { 'Authorization': 'Bearer ' + token }
 
-    r = requests.get(dest_service.credentials["uri"] + '/destination-configuration/v1/destinations/'+dest_name, headers=headers)
+    r = requests.get(dest_service.credentials["uri"] + '/destination-configuration/v1/destinations/' + dest_name, headers=headers)
 
     #######################################################################
     ############### Step 4: Access the destination securely ###############
     #######################################################################
 
     destination = r.json()
-    token = destination["authTokens"][0]
-    headers= { 'Authorization': token["type"] + ' ' + token["value"], 'Accept': 'application/json'}
+    token = destination["authTokens"][0]    
+    headers= { 'Authorization': token["type"] + ' ' + token["value"], 'Accept': 'application/json'}   
+    
+    if dest_client:
+        dest_client = '?sap-client=' + dest_client
+    else:
+        #Read sap-client from Destinations configuration
+        dest_client = '?sap-client=' + destination["destinationConfiguration"]["sap-client"]
 
-    r = requests.get(destination["destinationConfiguration"]["URL"] + dest_uri, headers=headers)
+    r = requests.get(destination["destinationConfiguration"]["URL"] + dest_uri + dest_client, headers=headers)
+
     return r
 
 
 @app.route('/odata_es5')
 def odata_es5():
     sDestinationName = 'SAP_Gateway'
-    sURI = '/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/Products?sap-client=002'
+    sURI = '/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/Products'
+    #Client number can be defined here to override default client in Destinations
+    sClient = ''
 
-    r = scp_connect(sDestinationName, sURI)
+    r = scp_connect(sDestinationName, sURI, sClient)
     results = r.json()
 
     return jsonify(**results)
