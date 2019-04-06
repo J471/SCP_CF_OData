@@ -41,41 +41,41 @@ In SAP CAI context, you can use this Python application as webhook endpoint:
 
 ## Prerequisites
 
-1. Basic understanding of differences between SCP environments: Neo, Cloud Foundry, ABAP.
+### 1.  Basic understanding of differences between SCP environments: Neo, Cloud Foundry, ABAP.
 
-  The below SAP Help page link will give you basic idea of different development environments:
-  https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ab512c3fbda248ab82c1c545bde19c78.html
+The below SAP Help page link will give you basic idea of different development environments:
+https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/ab512c3fbda248ab82c1c545bde19c78.html
 
-  This SAP blog post also has a good summary on differences between Neo and Cloud Foundry environment:  
-  https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/
-
-
-2. SAP Cloud Platform account
-
-  How can I get account on SAP Cloud Platform? You do not have to worry. SAP offers UNLIMITED duration of a free trial account on SCP Neo environment :)
-
-  You may refer to below article on how to get one:  
-  https://developers.sap.com/tutorials/hcp-create-trial-account.html
+This SAP blog post also has a good summary on differences between Neo and Cloud Foundry environment:  
+https://blogs.sap.com/2019/02/24/sap-cloud-platform-environment-cloud-foundry-vs-neo/
 
 
-3. Cloud Foundry Trial environment
+### 2.  SAP Cloud Platform account
 
-  In Prerequisites No. 1, you learnt that Cloud Foundry environment offers deployment of Python application.
+How can I get account on SAP Cloud Platform? You do not have to worry. SAP offers UNLIMITED duration of a free trial account on SCP Neo environment :)
 
-  SAP offers 90 days of trial duration. Your setup and configuration will be removed once expired. However, you can reapply a new one.
-
-  You can follow the below tutorial to get a Cloud Foundry trial account:  
-  https://developers.sap.com/tutorials/cp-cf-create-account.html
-
-4. Cloud Foundry Command Line Interface (CLI)
-
-  Although we can deploy the application directly in SCP cockpit, but in this document, I use Cloud Foundry CLI to deploy the application.
-
-  You may refer to step 4 - 6 in this tutorial, to download and setup your CLI to connect to your Cloud Foundry environment:  
-  https://developers.sap.com/india/tutorials/hcp-cf-getting-started.html
+You may refer to below article on how to get one:  
+https://developers.sap.com/tutorials/hcp-create-trial-account.html
 
 
-5. SAP Gateway Demo System ES5 account
+### 3. Cloud Foundry environment account
+
+In Prerequisites No. 1, you learnt that Cloud Foundry environment offers deployment of Python application.
+
+You can get a 90 days Cloud Foundry environment trial account in SCP cockpit. Your setup and configuration will be removed once expired. However, you can reapply a new one.
+
+Follow the below tutorial to get a Cloud Foundry trial account:  
+https://developers.sap.com/tutorials/cp-cf-create-account.html
+
+### 4. Cloud Foundry Command Line Interface (CLI)
+
+Although we can deploy the application directly in SCP cockpit, but in this document, I use Cloud Foundry CLI to deploy the application.
+
+Refer to step 4 - 6 in this tutorial, to download and setup your CLI to connect to your Cloud Foundry environment:  
+https://developers.sap.com/india/tutorials/hcp-cf-getting-started.html
+
+
+### 5. SAP Gateway Demo System ES5 account
 
 
 
