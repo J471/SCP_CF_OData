@@ -156,7 +156,7 @@ Click on *New Instance*.
 Create a new instance under *lite* service plan. Instance name is *"destination_service"*.
 ![scp_cf_dest_inst_config](images/scp_cf_dest_inst_config.jpg)
 
-Note that you can do binding to application directly here (will need to restart the application afterwards). However, in this document, binding will be done via [manifest.yml](manifest.yml) file during the deployment of application. You can see the detail later in [Step 4](#STEP-4:-Develop-and-deploy-Python-application-to-SCP-CF)
+Note that you can do binding to application directly here (will need to restart the application afterwards). However, in this document, binding will be done via [manifest.yml](manifest.yml) file during the deployment of application. You can see the detail later in [Step 4](#STEP-4:-Develop-and-deploy-Python-application-to-SCP-CF).
 
 **Result:**  
 You have configured a destination instance service in SCP CF. Destination instance service name is *"destination_service"*.
@@ -176,7 +176,7 @@ Click on *New Instance*.
 Create a new instance under *application* service plan. Instance name is *"uaa_service"*.
 ![scp_cf_uaa_inst_config](images/scp_cf_uaa_inst_config.jpg)
 
-You can do binding to application directly here (will need to restart the application afterwards), but in this document, binding will be done via [manifest.yml](manifest.yml) file during the deployment of application. Detail in [Step 4](#STEP-4:-Develop-and-deploy-Python-application-to-SCP-CF)
+You can do binding to application directly here (will need to restart the application afterwards), but in this document, binding will be done via [manifest.yml](manifest.yml) file during the deployment of application. Detail in [Step 4](#STEP-4:-Develop-and-deploy-Python-application-to-SCP-CF).
 
 **Result:**  
 You have configured an XSUAA instance service in SCP CF. UAA instance service name is *"uaa_service"*.
