@@ -191,7 +191,7 @@ I use Python 2.7.15 as per recommendation of Python version for SAP CAI (Python 
 #### main.py
 The python file.  
 
-I use the below blog post as base of my python application for consuming destination service and authentication process with some modifications here and there:
+I use the below blog post as base of my python application for consuming destination service and authentication process with some modifications here and there:  
 https://blogs.sap.com/2018/10/08/using-the-destination-service-in-the-cloud-foundry-environment/
 
 `/odata_es5` is application routing that will consume ES5 OData service.
